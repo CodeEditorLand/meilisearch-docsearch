@@ -1,18 +1,12 @@
 {
-  "name": "example",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
-  },
-  "dependencies": {
-    "meilisearch-docsearch": "workspace:"
-  },
-  "devDependencies": {
-    "typescript": "5.4.5",
-    "vite": "5.2.11"
-  }
+	"name": "example",
+	"scripts": {
+		"build": "vite build",
+		"dev": "vite",
+		"preview": "vite preview"
+	},
+	"dependencies": {
+		"meilisearch-docsearch": "workspace:"
+	},
+	"devDependencies": {}
 }
