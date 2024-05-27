@@ -1,34 +1,34 @@
 {
-	"gitSiteUrl": "https://github.com/tauri-apps/meilisearch-docsearch/",
-	"pkgManagers": {
-		"javascript": {
-			"version": true,
-			"getPublishedVersion": "npm view ${ pkgFile.pkg.name } version",
-			"prepublish": ["pnpm install --no-optional"],
-			"publish": [
-				{
-					"command": "echo '<details>\n<summary><em><h4>NPM Package Publish</h4></em></summary>\n\n```'",
-					"dryRunCommand": true,
-					"pipe": true
-				},
-				{
-					"command": "pnpm publish --access public --loglevel silly --no-git-checks",
-					"dryRunCommand": "pnpm publish --dry-run --access public ",
-					"pipe": true
-				},
-				{
-					"command": "echo '```\n\n</details>\n'",
-					"dryRunCommand": true,
-					"pipe": true
-				}
-			],
-			"postpublish": []
-		}
-	},
-	"packages": {
-		"meilisearch-docsearch": {
-			"path": ".",
-			"manager": "javascript"
-		}
-	}
+  "gitSiteUrl": "https://github.com/tauri-apps/meilisearch-docsearch/",
+  "pkgManagers": {
+    "javascript": {
+      "version": true,
+      "getPublishedVersion": "npm view ${ pkgFile.pkg.name } version",
+      "prepublish": ["pnpm install --no-optional"],
+      "publish": [
+        {
+          "command": "echo '<details>\n<summary><em><h4>NPM Package Publish</h4></em></summary>\n\n```'",
+          "dryRunCommand": true,
+          "pipe": true
+        },
+        {
+          "command": "pnpm publish --access public --loglevel silly --no-git-checks",
+          "dryRunCommand": "pnpm publish --dry-run --access public ",
+          "pipe": true
+        },
+        {
+          "command": "echo '```\n\n</details>\n'",
+          "dryRunCommand": true,
+          "pipe": true
+        }
+      ],
+      "postpublish": []
+    }
+  },
+  "packages": {
+    "meilisearch-docsearch": {
+      "path": ".",
+      "manager": "javascript"
+    }
+  }
 }
