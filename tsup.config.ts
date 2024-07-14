@@ -1,7 +1,7 @@
 import { defineConfig, Options } from "tsup";
 import { solidPlugin } from "esbuild-plugin-solid";
 // @ts-expect-error node built-in module
-import { readFileSync } from "fs";
+import { readFileSync } from "node:fs";
 
 const VERSION = JSON.parse(readFileSync("package.json", "utf-8")).version;
 
