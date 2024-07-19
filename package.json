@@ -34,12 +34,12 @@
 		"semver": ">=7.5.2"
 	},
 	"dependencies": {
-		"meilisearch": "0.40.0"
+		"meilisearch": "0.41.0"
 	},
 	"devDependencies": {
-		"covector": "0.11.0",
-		"esbuild": "0.21.5",
+		"covector": "0.12.2",
+		"esbuild": "0.23.0",
 		"esbuild-plugin-solid": "0.6.0",
-		"tsup": "8.1.0"
+		"tsup": "8.1.2"
 	}
 }
