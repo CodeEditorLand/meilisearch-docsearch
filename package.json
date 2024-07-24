@@ -40,6 +40,6 @@
 		"covector": "0.12.2",
 		"esbuild": "0.23.0",
 		"esbuild-plugin-solid": "0.6.0",
-		"tsup": "8.1.2"
+		"tsup": "8.2.2"
 	}
 }
