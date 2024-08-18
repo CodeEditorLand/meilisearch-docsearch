@@ -5,9 +5,9 @@
 	"description": "A quick search component for meilisearch, inspired by algolia/docsearch.",
 	"devDependencies": {
 		"covector": "0.12.3",
-		"esbuild": "0.23.0",
+		"esbuild": "0.23.1",
 		"esbuild-plugin-solid": "0.6.0",
-		"tsup": "8.2.3"
+		"tsup": "8.2.4"
 	},
 	"exports": {
 		".": {
