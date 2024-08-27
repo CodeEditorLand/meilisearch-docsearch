@@ -10,7 +10,7 @@ A quick search component for meilisearch, inspired by algolia/docsearch.
 
 # Usage through NPM (Recommended)
 
-### Installation
+### 🚀 Installation
 
 ```sh
 yarn add meilisearch-docsearch
