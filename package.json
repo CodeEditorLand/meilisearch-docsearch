@@ -1,6 +1,13 @@
 {
-	"name": "meilisearch-docsearch",
+	"dependencies": {
+		"meilisearch": "0.42.0"
+	},
 	"description": "A quick search component for meilisearch, inspired by algolia/docsearch.",
+	"devDependencies": {
+		"esbuild": "0.24.0",
+		"esbuild-plugin-solid": "0.6.0",
+		"tsup": "8.3.0"
+	},
 	"exports": {
 		".": {
 			"import": "./dist/index.js",
@@ -17,26 +24,19 @@
 			"types": "./dist/index.solid.d.ts"
 		}
 	},
-	"main": "./dist/index.js",
-	"types": "./dist/index.d.ts",
 	"files": [
 		"dist",
 		"LICENSE_*"
 	],
+	"main": "./dist/index.js",
+	"name": "meilisearch-docsearch",
+	"resolutions": {
+		"semver": ">=7.5.2"
+	},
 	"scripts": {
 		"build": "tsup",
 		"prepublishOnly": "pnpm build",
 		"ts:check": "tsc --noEmit"
 	},
-	"resolutions": {
-		"semver": ">=7.5.2"
-	},
-	"dependencies": {
-		"meilisearch": "0.42.0"
-	},
-	"devDependencies": {
-		"esbuild": "0.24.0",
-		"esbuild-plugin-solid": "0.6.0",
-		"tsup": "8.3.0"
-	}
+	"types": "./dist/index.d.ts"
 }
