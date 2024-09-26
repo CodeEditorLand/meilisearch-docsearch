@@ -1,42 +1,61 @@
 {
-	"name": "meilisearch-docsearch",
-	"description": "A quick search component for meilisearch, inspired by algolia/docsearch.",
-	"exports": {
-		".": {
-			"import": "./dist/index.js",
-			"require": "./dist/index.cjs",
-			"types": "./dist/index.d.ts"
-		},
-		"./css": "./dist/index.css",
-		"./css/button": "./dist/button.css",
-		"./css/modal": "./dist/modal.css",
-		"./css/variables": "./dist/variables.css",
-		"./solid": {
-			"import": "./dist/index.solid.jsx",
-			"require": "./dist/index.solid.jsx",
-			"types": "./dist/index.solid.d.ts"
-		}
-	},
-	"main": "./dist/index.js",
-	"types": "./dist/index.d.ts",
-	"files": [
-		"dist",
-		"LICENSE_*"
-	],
-	"scripts": {
-		"build": "tsup",
-		"prepublishOnly": "pnpm build",
-		"ts:check": "tsc --noEmit"
-	},
-	"resolutions": {
-		"semver": ">=7.5.2"
-	},
-	"dependencies": {
-		"meilisearch": "0.42.0"
-	},
-	"devDependencies": {
-		"esbuild": "0.24.0",
-		"esbuild-plugin-solid": "0.6.0",
-		"tsup": "8.3.0"
-	}
+  "name": "meilisearch-docsearch",
+  "version": "0.6.1",
+  "description": "A quick search component for meilisearch, inspired by algolia/docsearch.",
+  "license": "MIT or Apache-2.0",
+  "files": [
+    "dist",
+    "LICENSE_*"
+  ],
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./solid": {
+      "types": "./dist/index.solid.d.ts",
+      "import": "./dist/index.solid.jsx",
+      "require": "./dist/index.solid.jsx"
+    },
+    "./css": "./dist/index.css",
+    "./css/variables": "./dist/variables.css",
+    "./css/button": "./dist/button.css",
+    "./css/modal": "./dist/modal.css"
+  },
+  "scripts": {
+    "prepublishOnly": "pnpm build",
+    "build": "tsup",
+    "watch": "tsup --watch",
+    "ts:check": "tsc --noEmit",
+    "format": "prettier --write \"./**/*.{js,jsx,ts,tsx,json,html,css}\" --ignore-path .gitignore",
+    "format:check": "prettier --check \"./**/*.{js,jsx,ts,tsx,json,html,css}\" --ignore-path .gitignore"
+  },
+  "dependencies": {
+    "meilisearch": "0.42.0",
+    "solid-js": "1.9.1"
+  },
+  "devDependencies": {
+    "esbuild": "0.24.0",
+    "esbuild-plugin-solid": "0.6.0",
+    "prettier": "3.3.3",
+    "tsup": "8.3.0",
+    "typescript": "5.6.2"
+  },
+  "resolutions": {
+    "semver": ">=7.5.2"
+  },
+  "keywords": [
+    "meilisearch",
+    "search",
+    "docsearch",
+    "autocomplete",
+    "docs",
+    "quicksearch",
+    "quicksearchbar"
+  ],
+  "packageManager": "pnpm@9.11.0"
 }
