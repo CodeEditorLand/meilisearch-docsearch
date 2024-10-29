@@ -1,6 +1,6 @@
 {
 	"dependencies": {
-		"meilisearch": "0.44.1"
+		"meilisearch": "0.45.0"
 	},
 	"description": "A quick search component for meilisearch, inspired by algolia/docsearch.",
 	"devDependencies": {
