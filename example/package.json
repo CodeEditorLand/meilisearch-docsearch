@@ -1,12 +1,12 @@
 {
+	"dependencies": {
+		"meilisearch-docsearch": "workspace:"
+	},
+	"devDependencies": {},
 	"name": "example",
 	"scripts": {
 		"build": "vite build",
 		"dev": "vite",
 		"preview": "vite preview"
-	},
-	"dependencies": {
-		"meilisearch-docsearch": "workspace:"
-	},
-	"devDependencies": {}
+	}
 }
