@@ -18,7 +18,9 @@ export default function trapFocus(
 		const focusableElements = el.querySelectorAll<HTMLElement>(
 			"a[href]:not([disabled]), button:not([disabled]), input:not([disabled])",
 		);
+
 		const firstElement = focusableElements[0];
+
 		const lastElement = focusableElements[focusableElements.length - 1];
 
 		function trap(event: KeyboardEvent) {

@@ -19,6 +19,7 @@ export function useDocSearchHotKeys({
 }) {
 	function isEditingContent(event: KeyboardEvent): boolean {
 		const element = event.target as HTMLElement;
+
 		const tagName = element.tagName;
 
 		return (
@@ -57,9 +58,12 @@ export function useDocSearchHotKeys({
 					const ctrl =
 						(isAppleDevice() ? event.metaKey : event.ctrlKey) ==
 						modsAndkeys.some(isCtrl);
+
 					const shift =
 						event.shiftKey == modsAndkeys.includes("shift");
+
 					const alt = event.altKey == modsAndkeys.some(isAlt);
+
 					const meta =
 						!isAppleDevice() &&
 						event.metaKey == modsAndkeys.some(isMeta);
@@ -77,12 +81,14 @@ export function useDocSearchHotKeys({
 	function onKeyDown(e: KeyboardEvent) {
 		if ((e.key === "Escape" && isOpen()) || isHotKey(e)) {
 			e.preventDefault();
+
 			if (isOpen()) {
 				onClose();
 			} else if (!document.body.classList.contains("docsearch--active")) {
 				// We check that no other DocSearch modal is showing before opening
 				// another one.
 				const selectedText = window.getSelection();
+
 				if (selectedText) onInput(selectedText.toString());
 				onOpen();
 			}

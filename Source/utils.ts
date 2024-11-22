@@ -22,6 +22,7 @@ export function renameKeysWithLevels<T extends Record<any, any>>(
 ): T {
 	return Object.keys(object).reduce((acc, key) => {
 		const result: any = acc;
+
 		if (key.startsWith(prefix)) {
 			const newKey = key.replace(prefix, "");
 			result[newKey] = object[key];
@@ -42,6 +43,7 @@ export function replaceNullString<T extends { [key: string]: unknown }>(
 ): T {
 	return Object.keys(object).reduce((acc, key) => {
 		const result: any = acc;
+
 		if (typeof object[key] === "string" && object[key] === "null") {
 			result[key] = null;
 		} else {
@@ -102,6 +104,7 @@ export function groupBy<T, K extends keyof T>(
 		}
 		newCollection[key].push(item);
 	});
+
 	return newCollection;
 }
 
@@ -122,6 +125,7 @@ export function compact<T>(array: T[]) {
 		}
 		results.push(value);
 	});
+
 	return results;
 }
 
@@ -197,6 +201,7 @@ export function getSnippetedValue(object: Record<any, any>, property: string) {
 		return object[property];
 	}
 	let snippet = replaceHtmlTagsToHighlight(object._formatted[property]);
+
 	if (snippet[0] !== snippet[0].toUpperCase()) {
 		snippet = `…${snippet}`;
 	}
@@ -224,6 +229,7 @@ export function debounce<F extends (...args: Parameters<F>) => ReturnType<F>>(
 	waitFor: number = 300,
 ): (...args: Parameters<F>) => void {
 	let timeout: number;
+
 	return (...args: Parameters<F>): void => {
 		clearTimeout(timeout);
 		timeout = setTimeout(() => func(...args), waitFor);
