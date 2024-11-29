@@ -25,10 +25,12 @@ export function renameKeysWithLevels<T extends Record<any, any>>(
 
 		if (key.startsWith(prefix)) {
 			const newKey = key.replace(prefix, "");
+
 			result[newKey] = object[key];
 		} else {
 			result[key] = object[key];
 		}
+
 		return result;
 	}, {} as T);
 }
@@ -49,6 +51,7 @@ export function replaceNullString<T extends { [key: string]: unknown }>(
 		} else {
 			result[key] = object[key];
 		}
+
 		return result;
 	}, {} as T);
 }
@@ -89,12 +92,14 @@ export function groupBy<T, K extends keyof T>(
 	property: K,
 ): { [K in keyof T]: T[] } {
 	const newCollection: any = {};
+
 	collection.forEach((item: any) => {
 		if (item[property] === undefined) {
 			throw new Error(
 				`[groupBy]: Object has no key ${new String(property)}`,
 			);
 		}
+
 		let key = item[property];
 
 		// the given data type of hits might be conflict with the properties of the native Object,
@@ -102,6 +107,7 @@ export function groupBy<T, K extends keyof T>(
 		if (!Object.prototype.hasOwnProperty.call(newCollection, key)) {
 			newCollection[key] = [];
 		}
+
 		newCollection[key].push(item);
 	});
 
@@ -119,10 +125,12 @@ export function groupBy<T, K extends keyof T>(
  */
 export function compact<T>(array: T[]) {
 	const results: T[] = [];
+
 	array.forEach((value) => {
 		if (!value) {
 			return;
 		}
+
 		results.push(value);
 	});
 
@@ -156,6 +164,7 @@ export function getHighlightedValue<T extends Record<any, any>>(
 	) {
 		return replaceHtmlTagsToHighlight(object._formatted[property]);
 	}
+
 	return object[property];
 }
 
@@ -200,14 +209,17 @@ export function getSnippetedValue(object: Record<any, any>, property: string) {
 	) {
 		return object[property];
 	}
+
 	let snippet = replaceHtmlTagsToHighlight(object._formatted[property]);
 
 	if (snippet[0] !== snippet[0].toUpperCase()) {
 		snippet = `…${snippet}`;
 	}
+
 	if ([".", "!", "?"].indexOf(snippet[snippet.length - 1]) === -1) {
 		snippet = `${snippet}…`;
 	}
+
 	return snippet;
 }
 
@@ -232,6 +244,7 @@ export function debounce<F extends (...args: Parameters<F>) => ReturnType<F>>(
 
 	return (...args: Parameters<F>): void => {
 		clearTimeout(timeout);
+
 		timeout = setTimeout(() => func(...args), waitFor);
 	};
 }

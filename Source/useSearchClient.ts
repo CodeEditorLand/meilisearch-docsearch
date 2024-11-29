@@ -9,7 +9,9 @@ export function useSearchClient({
 	clientAgents = [],
 }: {
 	host: string;
+
 	apiKey: string;
+
 	clientAgents?: string[];
 }): Accessor<MeiliSearch> {
 	return createMemo(

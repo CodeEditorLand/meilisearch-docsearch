@@ -12,9 +12,13 @@ export function useDocSearchHotKeys({
 	hotKeys,
 }: {
 	isOpen: Accessor<boolean>;
+
 	onOpen: () => void;
+
 	onClose: () => void;
+
 	onInput: (query: string) => void;
+
 	hotKeys: DocSearchHotKeys;
 }) {
 	function isEditingContent(event: KeyboardEvent): boolean {
@@ -90,11 +94,13 @@ export function useDocSearchHotKeys({
 				const selectedText = window.getSelection();
 
 				if (selectedText) onInput(selectedText.toString());
+
 				onOpen();
 			}
 		}
 	}
 
 	onMount(() => window.addEventListener("keydown", onKeyDown));
+
 	onCleanup(() => window.removeEventListener("keydown", onKeyDown));
 }

@@ -31,10 +31,12 @@ export default function trapFocus(
 			if (event.shiftKey) {
 				if (environment.document.activeElement === firstElement) {
 					event.preventDefault();
+
 					lastElement.focus();
 				}
 			} else if (environment.document.activeElement === lastElement) {
 				event.preventDefault();
+
 				firstElement.focus();
 			}
 		}
