@@ -32,10 +32,10 @@
 		"semver": ">=7.5.2"
 	},
 	"dependencies": {
-		"meilisearch": "0.46.0"
+		"meilisearch": "0.47.0"
 	},
 	"devDependencies": {
-		"esbuild": "0.24.0",
+		"esbuild": "0.24.2",
 		"esbuild-plugin-solid": "0.6.0",
 		"tsup": "8.3.5"
 	}
