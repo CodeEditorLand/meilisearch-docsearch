@@ -32,7 +32,7 @@
 		"semver": ">=7.5.2"
 	},
 	"dependencies": {
-		"meilisearch": "0.48.1"
+		"meilisearch": "0.48.2"
 	},
 	"devDependencies": {
 		"esbuild": "0.24.2",
