@@ -37,6 +37,6 @@
 	"devDependencies": {
 		"esbuild": "0.24.2",
 		"esbuild-plugin-solid": "0.6.0",
-		"tsup": "8.3.5"
+		"tsup": "8.3.6"
 	}
 }
