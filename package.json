@@ -35,7 +35,7 @@
 		"meilisearch": "0.48.2"
 	},
 	"devDependencies": {
-		"esbuild": "0.24.2",
+		"esbuild": "0.25.0",
 		"esbuild-plugin-solid": "0.6.0",
 		"tsup": "8.3.6"
 	}
